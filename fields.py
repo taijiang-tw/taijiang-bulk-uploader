@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
-field_names_main = {"標題": "title", "作者": "author", "摘要": "notes"}
+field_names_main = {"標題": "title", "摘要": "notes"}
 field_names_extras_free = {"起始時間": "start_time", "結束時間": "end_time",
         "識別碼": "identifier", "主題關鍵字 1": "theme_keyword_1",
         "主題關鍵字 2": "theme_keyword_2", "主題關鍵字 3": "theme_keyword_3",
-        "主題關鍵字 4": "theme_keyword_4", "主題關鍵字 5": "theme_keyword_5",
+        "主題關鍵字 4": "theme_keyword_4", "主題關鍵字 5": "theme_keyword_5", "作者": "author_name",
         "作者的電子郵件": "author_mail", "作者聯絡電話": "author_phone", "維護者": "maintainer_name",
         "維護者的電子郵件": "maintainer_mail", "維護者聯絡電話": "maintainer_phone",
         "空間範圍.X.min": "x_min", "空間範圍.X.max": "x_max", "空間範圍.Y.min": "y_min",
@@ -31,9 +31,9 @@ options_hist_material = {"清代方志": "book_from_local_chronicles_in_qing_dyn
         "戰後官方資料與鄉鎮志": "book_from_officials_in_postwar_period",
         "碑文": "book_from_inscriptions", "報紙": "book_from_newspapers",
         "地圖": "book_from_maps",
-        "台灣總督府檔案（公文類纂、府報、調查報告、職員錄、衛生法規）": "book_from_taiwanese_governor_office_files",
+        "台灣總督府檔案": "book_from_taiwanese_governor_office_files",
         "荷治時期檔案": "book_from_dutch_formosa",
-        "地方田野收集文獻（族譜、寺廟志、帳冊、契約）": "book_from_field_researches"}
+        "地方田野收集文獻": "book_from_field_researches"}
 groups = {"生物生態類": "biota", "土地邊界類": "boundaries",
         "氣候氣象類": "climatology-meteorology-atmosphere",
         "環境活動類": "environment", "經濟活動類": "economy",

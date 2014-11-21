@@ -3,4 +3,5 @@ uploads/
 *.pyc
 *.csv
 *.xls
+*.test
 configs.py

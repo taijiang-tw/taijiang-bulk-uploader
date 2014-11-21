@@ -47,7 +47,7 @@ def main():
         if row["檔案標題"] != "":
             assert ((row["檔案網址"] != "") ^ (row["檔案名稱"] != "")), "錯誤: 檔案網址與檔案名稱僅能擇一"
             create_resource(package_id=returned_package_info["id"], name=row["檔案標題"],
-                    url=row["檔案網址"], file_format=row["檔案格式"], file_name=row["檔案名稱"])
+                    url=row["檔案網址"], file_format=row["檔案格式"], file_name=row["檔案名稱"], file_newname=row["新檔案名稱"])
 
 
 def process_row(row, n):
@@ -93,12 +93,12 @@ def process_row(row, n):
     return returned_package_info
 
 
-def create_resource(package_id, name, file_format, url="", file_name=""):
+def create_resource(package_id, name, file_format, url="", file_name="", file_newname=""):
     data = {"package_id": package_id, "url": url, "name": name, "format": file_format}
     if file_name != "":
         requests.post(c.api_url + "/api/action/resource_create", data=data,
-                files=[("upload", file(args.d + "/" + file_name))],
-                headers={"X-CKAN-API-Key": c.api_key})
+                files=[("upload", (file_newname, file((args.d + "/" + file_name), "r")))],
+	        headers={"X-CKAN-API-Key": c.api_key})
     else:
         data_string = urllib.quote(json.dumps(data))
         request = urllib2.Request(c.api_url + "/api/action/resource_create")

@@ -4,4 +4,3 @@ uploads/
 *.csv
 *.xls
 *.test
-configs.py

@@ -5,6 +5,9 @@
 --------
 
 1. ckanapi
+2. shapely
+3. requests
+4. unicodecsv
 
 事前準備
 --------
@@ -18,6 +21,7 @@
    - org_name: 資料集所屬之組織
    - api_url: CKAN 主機所在位址 (如: http://127.0.0.1:5000)
    - api_key: CKAN 使用者 API 密鑰
+   - visibility: 欲上傳資料集之開放狀態 (開放: public；非開放: private)
 
 操作方式
 --------
@@ -27,7 +31,7 @@
    python uploader.py -f META_FILE -d FILE_FOLDER -c CONFIG_FILE
 
 - META_FILE: 詮釋資料 csv 檔案位置
-- FILE_FOLDER: 實體檔案所在資料夾位置
+- FILE_FOLDER: 實體檔案所在資料夾位置 (optional)
 - CONFIG_FILE: 連線設定 json 檔案位置
 
 使用例:
